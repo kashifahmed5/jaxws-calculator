@@ -24,6 +24,8 @@ sum =value1+value2;
 } %>
 
  
- <body> The result is: <%=value1%>+<%=value2%>=<%=sum%> <br> <a href="index.jsp">Back</a> </body>
+ <body> The result is: <%=value1%>+<%=value2%>=<%=sum%>
+ 						 
+ <br> <a href="index.jsp">Back</a> </body>
  
   </html>
