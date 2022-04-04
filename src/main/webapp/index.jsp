@@ -7,7 +7,7 @@
 <title>Calculator</title>
 </head>
 <body>
-<form action="result.jsp"> Please enter two numbers to addition: <input type="text" name="value1"> + <input type="text" name="value2"> <input type="submit" value="=">
+<form action="result.jsp"> Please enter 2 numbers to add: <input type="text" name="value1"> + <input type="text" name="value2"> <input type="submit" value="=">
 </form>
 
 <%-- <form action="result.jsp"> Please enter 2 whole numbers to sub: <input type="text" name="value1"> - <input type="text" name="value2"> <input type="submit" value="="></form> --%>
