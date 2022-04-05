@@ -56,6 +56,17 @@ pipeline {
             sh"aws eks --region us-east-1 update-kubeconfig --name cluster-2"
         }
     }
+       stage('namespacing') {
+     steps{  
+         script {
+            sh"kubectl create -f namespace-prod.yaml"
+            sh"kubectl create -f namespace-dev.yaml"
+            sh"kubectl create -f namespace-staging.yaml"
+            
+              
+         }
+      }
+    }    
     stage('deployment') {
      steps{  
          script {
