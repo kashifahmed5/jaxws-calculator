@@ -59,9 +59,9 @@ pipeline {
        stage('namespacing') {
      steps{  
          script {
-            sh"kubectl create -f namespace-prod.yaml"
-            sh"kubectl create -f namespace-dev.yaml"
-            sh"kubectl create -f namespace-staging.yaml"
+            sh"kubectl create -f eks_cicd/namespace-prod.yaml"
+            sh"kubectl create -f eks_cicd/namespace-dev.yaml"
+            sh"kubectl create -f eks_cicd/namespace-staging.yaml"
             
               
          }
