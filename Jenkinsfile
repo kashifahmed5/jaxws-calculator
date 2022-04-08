@@ -61,8 +61,8 @@ pipeline {
      steps{  
          script {
             sh"aws --region us-east-1 eks get-token --cluster-name cluster-2"
-            sh"kubectl apply -f eks_cicd/deployment.yaml"
-            sh"kubectl rollout restart -f  eks_cicd/deployment.yaml "
+            sh"kubectl apply -f eks_cicd/deployment.yaml -n cluster-2-stage"
+            sh"kubectl rollout restart -f  eks_cicd/deployment.yaml -n cluster-2-stage "
             
               
          }
@@ -72,7 +72,7 @@ pipeline {
      steps{  
          script {
             
-            sh"kubectl apply -f eks_cicd/service.yaml"
+            sh"kubectl apply -f eks_cicd/service.yaml -n cluster-2-stage"
               
          }
       }
@@ -81,7 +81,7 @@ pipeline {
      steps{  
          script {
             
-            sh"kubectl apply -f  eks_cicd/ingress.yaml  -o yaml"
+            sh"kubectl apply -f  eks_cicd/ingress.yaml  -o yaml  -n cluster-2-stage"
               
          }
       }
