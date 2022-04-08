@@ -62,7 +62,7 @@ pipeline {
          script {
             sh"aws --region us-east-1 eks get-token --cluster-name cluster-2"
             sh"kubectl apply -f eks_cicd/deployment.yaml --namespace cluster-2-prod"
-            sh"kubectl rollout restart -f  eks_cicd/deployment.yaml --namespace cluster-2-prod "
+            sh"kubectl rollout restart -f  eks_cicd/deployment.yaml --namespace cluster-2-prod"
             
               
          }
