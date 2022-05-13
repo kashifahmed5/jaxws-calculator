@@ -25,7 +25,7 @@ pipeline {
             }
         }
         
-
+        // building the image for ecr repository
     stage('Building image') {
       steps{
         script {
