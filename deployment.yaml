@@ -2,24 +2,24 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app.kubernetes.io/name: cluster-2
-    app.kubernetes.io/instance: cluster-2-instance
+    app.kubernetes.io/name: USERS
+    app.kubernetes.io/instance: USERS-instance
     app.kubernetes.io/version: '1.0.0'
     app.kubernetes.io/managed-by: kubectl
-  name: cluster-2-deployment
+  name: USERS-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: cluster-2
+      app: USERS
   template:
     metadata:
       labels:
-        app: cluster-2
+        app: USERS
     spec:
       containers:
-        - image: 737971166371.dkr.ecr.us-east-1.amazonaws.com/jaxws-calculator:latest
+        - image: 737971166371.dkr.ecr.us-east-1.amazonaws.com/users:latest
           imagePullPolicy: Always
-          name: jaxws-calculator
+          name: users
           ports:
-            - containerPort: 8080
+            - containerPort: 5000
